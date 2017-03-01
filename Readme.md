@@ -1,7 +1,7 @@
 # Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Татьяна Мелащенко](https://up.htmlacademy.ru/adaptive/10/user/112091).
-* Наставник: `Неизвестно`.
+* Наставник: `Евгений Котов`(https://up.htmlacademy.ru/adaptive/10/user/25083).
 
 ---
 
