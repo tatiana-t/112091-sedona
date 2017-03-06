@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=920, initial-scale=1">
+    <title>HTML Academy: Седона</title>
+  </head>
+  <body>
+    <header class="page-head">
+      <nav class="main-menu">
+        <div class="main-menu__btn"></div>
+        <ul class="main-menu__list">
+          <li class="main-menu__item"><a href="index.html">Главная</a></li>
+          <li class="main-menu__item"><a href="photo.html">Фото и видео</a></li>
+          <li class="main-menu__item">Форма отзыва</li>
+          <li class="main-menu__item"><a href="https://htmlacademy.ru/" target="_blanc">Html Academy</a></li>
+        </ul>
+      </nav>
+      <div class="page-head__logo"><img src=""></div>
+      <div class="page-head__intro--inner"><h1>Sedona</h1></div>
+    </header>
+    <main class="page-content">
+      <div class="page-content__item">
+        <h2 class="item--title">Оставьте свой отзыв</h2>
+        <p class="item--text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+      </div>
+      <div class="page-content__item">
+        <form class="item__form" action="https://echo.htmlacademy.ru/" method="post" name="introduction">
+          <fieldset class="item__name">
+            <h2 class="item--title">Представьтесь</h2>
+            <label class="item--text" for="name">Имя<sup>*</sup><input class="form-text" id="name" type="text" placeholder="Петр" required name="name"></label><br>
+            <label class="item--text" for="surname">Фамилия<sup>*</sup><input class="form-text" id="surname" type="text" placeholder="Иванов" required name="surname"></label><br>
+            <label class="item--text" for="fathername">Отчество<input class="form-text" id="fathername" type="text" placeholder="Александрович" name="fathername"></label><br>
+          </fieldset>
+
+          <fieldset class="item__contact">
+            <h2 class="item--title">Контактная информация</h2>
+            <label class="item--text" for="tel">Контактный телефон<sup>*</sup><br><input class="form-text" id="tel" type="tel" placeholder="Введите телефон" pattern="[0-9]{11}" required name="tel"></label><br>
+            <label class="item--text" for="email">Электронная почта<sup>*</sup><br><input class="form-text" id="email" type="email" placeholder="Введите email" pattern="?" required name="email"></label>
+          </fieldset>
+
+          <fieldset class="item__mark">
+            <h2 class="item--title">Ваше общее впечатление</h2>
+            <label class="form-text" for="good"><input id="good" type="radio" value="Скорее положительное" name="mark">Скорее положительное</label><br>
+            <label class="form-text" for="bad"><input id="bad" type="radio" value="Скорее отрицательное" name="mark">Скорее отрицательное</label><br>
+            <label class="form-text" for="strange"><input id="strange" type="radio" value="Затрудняюсь ответить" name="mark">Затрудняюсь ответить</label>
+          </fieldset>
+
+          <fieldset class="item__sights">
+            <h2 class="item--title">Посещенные достопримечательности</h2>
+            <label class="form-text" for="diablo-bridge"><input id="diablo-bridge" type="checkbox" checked name="visited-sights:diablo-bridge">Мост дьявола</label><br>
+            <label class="form-text" for="slide-park"><input id="slide-park" type="checkbox" checked name="visited-sights:slide-park">Слайд-парк</label><br>
+            <label class="form-text" for="mountian-bell"><input id="mountian-bell" type="checkbox" name="visited-sights:mountian-bell">Гора колокол</label><br>
+            <label class="form-text" for="red-rocks"><input id="red-rocks" type="checkbox" checked name="visited-sights:red-rocks">Красные скалы</label>
+          </fieldset>
+
+          <fieldset class="item__emotions">
+            <label class="item--title" for="emotions">Опишите свои эмоции<br>
+            <textarea class="form-text" name="emotions" id="emotions" cols="" rows="10" placeholder="Опишите подробно все свои восторги"></textarea></label><br>
+            <input class="btn" id="submit" type="submit" value="Отправить отзыв">
+          </fieldset>
+        </form>
+      </div>
+    </main>
+    <footer class="page-footer">
+      <p class="page-footer__teg">#visitSEDONA</p>
+      <div class="page-footer__social-btn">
+        <ul>
+          <li class="social-btn social-btn--tw"><a href="">Twitter</a></li>
+          <li class="social-btn social-btn--fb"><a href="">Facebook</a></li>
+          <li class="social-btn social-btn--youtube"><a href="">Youtube</a></li>
+        </ul>
+      </div>
+      <div class="copyright">Разработано <span class="cpyright__pic"><a href="">HtmlAcademy</a></span></div>
+    </footer>
+  </body>
+</html>
