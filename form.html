@@ -2,28 +2,31 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=920, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href=".css">
+    <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Седона</title>
   </head>
   <body>
     <header class="page-head">
-      <nav class="main-menu">
-        <div class="main-menu__btn"></div>
+      <nav class="main-menu main-menu--opened">
+        <div class="main-menu__toggle"></div>
         <ul class="main-menu__list">
           <li class="main-menu__item"><a href="index.html">Главная</a></li>
           <li class="main-menu__item"><a href="photo.html">Фото и видео</a></li>
           <li class="main-menu__item">Форма отзыва</li>
-          <li class="main-menu__item"><a href="https://htmlacademy.ru/" target="_blanc">Html Academy</a></li>
+          <li class="main-menu__item"><a href="https://htmlacademy.ru/" target="blanc">Html Academy</a></li>
         </ul>
       </nav>
-      <div class="page-head__logo"><img src=""></div>
-      <div class="page-head__intro--inner"><h1>Sedona</h1></div>
+      <div class="page-head__logo"><img src="img/logo-sedona-mobile.svg" alt="Sedona"></div>
+      <div class="page-head__intro--inner"><h1><img src="img/text-sedona.svg" width="280" alt="Sedona"></h1></div>
     </header>
     <main class="page-content">
-      <div class="page-content__item">
-        <h2 class="item--title">Оставьте свой отзыв</h2>
+      <div class="page-content__item item--prev">
+        <h2 class="item--title title--prev">Оставьте свой отзыв</h2>
         <p class="item--text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
       </div>
+
       <div class="page-content__item">
         <form class="item__form" action="https://echo.htmlacademy.ru/" method="post" name="introduction">
           <fieldset class="item__name">
@@ -35,28 +38,28 @@
 
           <fieldset class="item__contact">
             <h2 class="item--title">Контактная информация</h2>
-            <label class="item--text" for="tel">Контактный телефон<sup>*</sup><br><input class="form-text" id="tel" type="tel" placeholder="Введите телефон" pattern="[0-9]{11}" required name="tel"></label><br>
+            <label class="item--text" for="tel">Контактный телефон<sup>*</sup></label><br><input class="form-text" id="tel" type="tel" placeholder="Введите телефон" pattern="[0-9]{11}" required name="tel"><br>
             <label class="item--text" for="email">Электронная почта<sup>*</sup><br><input class="form-text" id="email" type="email" placeholder="Введите email" pattern="?" required name="email"></label>
           </fieldset>
 
           <fieldset class="item__mark">
             <h2 class="item--title">Ваше общее впечатление</h2>
-            <label class="form-text" for="good"><input id="good" type="radio" value="Скорее положительное" name="mark">Скорее положительное</label><br>
-            <label class="form-text" for="bad"><input id="bad" type="radio" value="Скорее отрицательное" name="mark">Скорее отрицательное</label><br>
-            <label class="form-text" for="strange"><input id="strange" type="radio" value="Затрудняюсь ответить" name="mark">Затрудняюсь ответить</label>
+            <input id="good" type="radio" value="Скорее положительное" name="mark"><label class="form-text" for="good">Скорее положительное</label><br>
+            <input id="bad" type="radio" value="Скорее отрицательное" name="mark"><label class="form-text" for="bad">Скорее отрицательное</label><br>
+            <input id="strange" type="radio" value="Затрудняюсь ответить" name="mark"><label class="form-text" for="strange">Затрудняюсь ответить</label>
           </fieldset>
 
           <fieldset class="item__sights">
             <h2 class="item--title">Посещенные достопримечательности</h2>
-            <label class="form-text" for="diablo-bridge"><input id="diablo-bridge" type="checkbox" checked name="visited-sights:diablo-bridge">Мост дьявола</label><br>
-            <label class="form-text" for="slide-park"><input id="slide-park" type="checkbox" checked name="visited-sights:slide-park">Слайд-парк</label><br>
-            <label class="form-text" for="mountian-bell"><input id="mountian-bell" type="checkbox" name="visited-sights:mountian-bell">Гора колокол</label><br>
-            <label class="form-text" for="red-rocks"><input id="red-rocks" type="checkbox" checked name="visited-sights:red-rocks">Красные скалы</label>
+            <input id="diablo-bridge" type="checkbox" checked name="visited-sights:diablo-bridge"><label class="form-text" for="diablo-bridge">Мост дьявола</label><br>
+            <input id="slide-park" type="checkbox" checked name="visited-sights:slide-park"><label class="form-text" for="slide-park">Слайд-парк</label><br>
+            <input id="mountian-bell" type="checkbox" name="visited-sights:mountian-bell"><label class="form-text" for="mountian-bell">Гора колокол</label><br>
+            <input id="red-rocks" type="checkbox" checked name="visited-sights:red-rocks"><label class="form-text" for="red-rocks">Красные скалы</label>
           </fieldset>
 
           <fieldset class="item__emotions">
-            <label class="item--title" for="emotions">Опишите свои эмоции<br>
-            <textarea class="form-text" name="emotions" id="emotions" cols="" rows="10" placeholder="Опишите подробно все свои восторги"></textarea></label><br>
+            <label class="item--title" for="emotions">Опишите свои эмоции</label><br>
+            <textarea class="form-text" name="emotions" id="emotions" cols="" rows="10" placeholder="Опишите подробно все свои восторги"></textarea><br>
             <input class="btn" id="submit" type="submit" value="Отправить отзыв">
           </fieldset>
         </form>
@@ -71,7 +74,8 @@
           <li class="social-btn social-btn--youtube"><a href="">Youtube</a></li>
         </ul>
       </div>
-      <div class="copyright">Разработано <span class="cpyright__pic"><a href="">HtmlAcademy</a></span></div>
+      <div class="page-footer__copyright">Разработано <span class="copyright__pic"><a href="">HtmlAcademy</a></span></div>
     </footer>
+    <script src="js/script.js" type="text/javascript"></script>
   </body>
 </html>
