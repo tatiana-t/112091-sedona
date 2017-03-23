@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href=".css">
     <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Седона</title>
   </head>
@@ -11,10 +10,12 @@
     <header class="page-head">
       <nav class="main-menu main-menu--opened">
         <div class="main-menu__toggle"></div>
-        <ul class="main-menu__list">
-          <li class="main-menu__item"><a href="index.html">Главная</a></li>
-          <li class="main-menu__item"><a href="photo.html">Фото и видео</a></li>
-          <li class="main-menu__item">Форма отзыва</li>
+         <ul class="main-menu__list list--1">
+           <li class="main-menu__item"><a href="index.html">Главная</a></li>
+           <li class="main-menu__item"><a href="photo.html">Фото и видео</a></li>
+          </ul>
+         <ul class="main-menu__list list--2">
+          <li class="main-menu__item"><a>Форма отзыва</a></li>
           <li class="main-menu__item"><a href="https://htmlacademy.ru/" target="blanc">Html Academy</a></li>
         </ul>
       </nav>
@@ -27,37 +28,37 @@
         <p class="item--text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
       </div>
 
-      <div class="page-content__item">
-        <form class="item__form" action="https://echo.htmlacademy.ru/" method="post" name="introduction">
-          <fieldset class="item__name">
+      <div class="page-content__form">
+        <form class="item__form" action="https://echo.htmlacademy.ru/" method="post" name="backfeed">
+          <fieldset class="page-content__item item__name">
             <h2 class="item--title">Представьтесь</h2>
             <label class="item--text" for="name">Имя<sup>*</sup><input class="form-text" id="name" type="text" placeholder="Петр" required name="name"></label><br>
             <label class="item--text" for="surname">Фамилия<sup>*</sup><input class="form-text" id="surname" type="text" placeholder="Иванов" required name="surname"></label><br>
             <label class="item--text" for="fathername">Отчество<input class="form-text" id="fathername" type="text" placeholder="Александрович" name="fathername"></label><br>
           </fieldset>
 
-          <fieldset class="item__contact">
+          <fieldset class="page-content__item item__contact">
             <h2 class="item--title">Контактная информация</h2>
             <label class="item--text" for="tel">Контактный телефон<sup>*</sup></label><br><input class="form-text" id="tel" type="tel" placeholder="Введите телефон" pattern="[0-9]{11}" required name="tel"><br>
             <label class="item--text" for="email">Электронная почта<sup>*</sup><br><input class="form-text" id="email" type="email" placeholder="Введите email" pattern="?" required name="email"></label>
           </fieldset>
 
-          <fieldset class="item__mark">
+          <fieldset class="page-content__item item__mark">
             <h2 class="item--title">Ваше общее впечатление</h2>
-            <input id="good" type="radio" value="Скорее положительное" name="mark"><label class="form-text" for="good">Скорее положительное</label><br>
+            <input id="good" type="radio" value="Скорее положительное" name="mark" checked><label class="form-text" for="good">Скорее положительное</label><br>
             <input id="bad" type="radio" value="Скорее отрицательное" name="mark"><label class="form-text" for="bad">Скорее отрицательное</label><br>
             <input id="strange" type="radio" value="Затрудняюсь ответить" name="mark"><label class="form-text" for="strange">Затрудняюсь ответить</label>
           </fieldset>
 
-          <fieldset class="item__sights">
+          <fieldset class="page-content__item item__sights">
             <h2 class="item--title">Посещенные достопримечательности</h2>
-            <input id="diablo-bridge" type="checkbox" checked name="visited-sights:diablo-bridge"><label class="form-text" for="diablo-bridge">Мост дьявола</label><br>
-            <input id="slide-park" type="checkbox" checked name="visited-sights:slide-park"><label class="form-text" for="slide-park">Слайд-парк</label><br>
-            <input id="mountian-bell" type="checkbox" name="visited-sights:mountian-bell"><label class="form-text" for="mountian-bell">Гора колокол</label><br>
-            <input id="red-rocks" type="checkbox" checked name="visited-sights:red-rocks"><label class="form-text" for="red-rocks">Красные скалы</label>
+            <div class="diablo-bridge"><input id="diablo-bridge" class="diablo-bridge" type="checkbox" checked name="visited-sights" value="diablo-bridge"><label class="form-text" for="diablo-bridge">Мост дьявола</label></div>
+            <div class="slide-park"><input id="slide-park" class="slide-park" type="checkbox" checked name="visited-sights" value="slide-park"><label class="form-text" for="slide-park">Слайд-парк</label></div>
+            <div class="mountian-bell"><input id="mountian-bell" class="mountian-bell" type="checkbox" name="visited-sights" value="mountian-bell"><label class="form-text" for="mountian-bell">Гора колокол</label></div>
+            <div class="red-rocks"><input id="red-rocks" class="red-rocks" type="checkbox" checked name="visited-sights" value="red-rocks"><label class="form-text" for="red-rocks">Красные скалы</label></div>
           </fieldset>
 
-          <fieldset class="item__emotions">
+          <fieldset class="page-content__item item__emotions">
             <label class="item--title" for="emotions">Опишите свои эмоции</label><br>
             <textarea class="form-text" name="emotions" id="emotions" cols="" rows="10" placeholder="Опишите подробно все свои восторги"></textarea><br>
             <input class="btn" id="submit" type="submit" value="Отправить отзыв">
@@ -69,12 +70,13 @@
       <p class="page-footer__teg">#visitSEDONA</p>
       <div class="page-footer__social-btn">
         <ul>
-          <li class="social-btn social-btn--tw"><a href="">Twitter</a></li>
-          <li class="social-btn social-btn--fb"><a href="">Facebook</a></li>
-          <li class="social-btn social-btn--youtube"><a href="">Youtube</a></li>
+          <li class="social-btn social-btn--tw"><a href="#" alt="twitter"><svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.5 14.7"><path d="M11.3 0.2C13-0.3 14.4 0.4 15 1.3c0.7-0.2 1.4-0.5 2.1-0.7 0 0.8-0.5 1.5-0.9 1.7 0.7 0.2 1.3-0.5 1.3-0.5 -0.2 1-1 1.7-1.6 2 -0.2 6.6-3.3 11-10.4 10.8 -0.5 0 0.1 0-0.5 0 -0.4 0-4.3-0.4-5-1.8 2.3 0.2 4-0.4 4.8-1.1 -1-0.3-2.8-0.5-3.1-2.9C2.1 8.9 2.3 9 3 8.9 1.8 8.1 0.4 7.4 0.5 5.2c0.3 0.3 1.1 0.5 1.4 0.5 -0.7-0.2-2-3.3-0.9-4.8 1.9 1.8 3.8 3.5 7.4 3.7C8.5 2.3 9.5 0.8 11.3 0.2z"/></svg></a></li>
+          <li class="social-btn social-btn--fb"><a href="#" alt="facebook"><svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8.7 18.9"><path d="M6.3 3.4c0.8 0 1.6 0 2.4 0 0-1.1 0-2.2 0-3.4 -1 0-1.9 0-2.9 0C2.7 0.2 1.5 2.4 1.9 6.1H0v3.5h2c0 3.1 0 6.2 0 9.3 1.3 0 2.6 0 3.8 0 0-3.1 0-6.2 0-9.3h2.9V6.1H5.8C5.8 5.1 5.8 3.7 6.3 3.4z"/></svg></a></li>
+          <li class="social-btn social-btn--youtube"><a href="#" alt="Youtube"><svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 14"><path d="M17.1 0H2.8C1.3 0 0 1.3 0 2.8v8.3C0 12.7 1.3 14 2.8 14h14.3c1.6 0 2.8-1.3 2.8-2.8V2.8C20 1.3 18.7 0 17.1 0zM7 10.4V3.6L13.8 7 7 10.4z"/></svg></a></li>
         </ul>
       </div>
-      <div class="page-footer__copyright">Разработано <span class="copyright__pic"><a href="">HtmlAcademy</a></span></div>
+      <div class="page-footer__copyright">    <span>Разработано</span>
+        <a href="https://htmlacademy.ru/" alt="HtmlAcademy"><svg xmlns="http://www.w3.org/2000/svg" viewBox="654 0 586 840"><path d="M952.8 70H950L674.2 99.4v506.8L950 770l275.8-163.8V99.4L952.8 70 952.8 70zM1190.8 585.2L950 728 709.2 585.2V378l239.4 142.8V546l-163.8-98v25.2L950 572.6v26.6l-165.2-98v25.2l165.2 98 166.6-99.4V418.6l74.2-44.8V585.2zM1189.4 347.2l-65.8 39.2 -30.8 18.2 -144.2-85.4v25.2l123.2 74.2h-1.4l-2.8 1.4 -18.2 9.8 -102.2-60.2v25.2l81.2 47.6 -19.6 12.6 -60.2-36.4v25.2l40.6 23.8 -40.6 23.8L710.6 350l238-142.8L1189.4 347.2 1189.4 347.2zM1190.8 322L948.6 179.2 709.2 322V131.6L950 106.4l240.8 25.2V322L1190.8 322z" fill="#2E368F"/></svg></a></div>
     </footer>
     <script src="js/script.js" type="text/javascript"></script>
   </body>
