@@ -2,13 +2,17 @@
 @bg-blue: #81b3d2;
 @hr-shadow: #e5e5e5;
 @bg-grey: #f2f2f2;
+@disabled-grey: #e5e5e5;
+@hover-blue: #669ec0;
+@active-blue: #5496bd;
+@active-font: #94b9d2;
 @tablet-widths: ~"(min-width: 768px)";
 @desktop-widths: ~"(min-width: 1200px)";
 
 /*Mixins*/
-.wrap(){
-  padding: 0 0.0625%;
-}
+/*.wrap(){
+  padding: 0 6.25%;
+}*/
 
 .font-bold() {
   font-family: "PT Sans Bold";
@@ -33,11 +37,11 @@
   text-transform: uppercase;
 }
 .btn-active() {
-    color: #94b9d2;
-    background-color: darken(@bg-blue, 40%);
+    color: @active-font;
+    background-color: @active-blue;
 }
 .btn-hover() {
-    background-color: darken(@bg-blue, 20%);
+    background-color: @hover-blue;
 }
 .item-padding() {
   padding-top: 45px;
