@@ -166,3 +166,30 @@
     height: 500px;
   }
 }
+@media @desktop-widths {
+  .photo-content {
+    margin: 0 auto;
+    width: 1200px;
+  }
+  .photo-content__item {
+    width: 400px;
+    position: relative;
+  }
+  .item__desc {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+  .photo-content__item.item--first {
+    width: 100%;
+  }
+  .photo-content__item.item--last {
+    width: 100%;
+  }
+  .item__video {
+    width: 800px;
+    height: 500px;
+  }
+}

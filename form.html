@@ -50,6 +50,7 @@
             <input id="strange" type="radio" value="Затрудняюсь ответить" name="mark"><label class="form-text" for="strange">Затрудняюсь ответить</label>
           </fieldset>
 
+
           <fieldset class="page-content__item item__sights">
             <h2 class="item--title">Посещенные достопримечательности</h2>
             <div class="diablo-bridge"><input id="diablo-bridge" class="diablo-bridge" type="checkbox" checked name="visited-sights" value="diablo-bridge"><label class="form-text" for="diablo-bridge">Мост дьявола</label></div>
@@ -64,6 +65,17 @@
             <input class="btn" id="submit" type="submit" value="Отправить отзыв">
           </fieldset>
         </form>
+        <div class="failure-popup">
+           <h2 class="item--title">Что-то пошло не так</h2>
+           <p class="item--text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+           <button class="btn">OK</button>
+        </div>
+        <div class="success-popup">
+           <h2 class="item--title">Ваш отзыв отправлен!</h2>
+           <p class="item--text">Спасибо за ваше участие, ваш отзыв уже поступил к нам.
+В ближайшее время мы опубликуем его на сайте.</p>
+           <button class="btn">Закрыть окно</button>
+        </div>
       </div>
     </main>
     <footer class="page-footer">
