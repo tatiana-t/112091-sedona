@@ -4,15 +4,29 @@ h1, h2, h3, p, blockquote,
 a, img, sub, sup, ul, li,
 fieldset, label,
 article,  footer, header,
-nav, section, video, input, textarea, figure button {
+nav, section, video, input, textarea, figure, button {
   margin: 0;
   padding: 0;
   border: 0;
   list-style: none;
   text-decoration: none;
   border: none;
+  box-sizing: border-box;
 }
 img, figure {
   font-size: 0;
   line-height: 0;
+}
+img {
+
+  overflow: hidden;
+
+}
+fieldset {
+  margin-start: 0;
+  margin-end: 0;
+  padding-before: 0;
+  padding-start: 0;
+  padding-end: 0;
+  padding-after: 0;
 }

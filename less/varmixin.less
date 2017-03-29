@@ -16,14 +16,14 @@
 }*/
 
 .font-bold() {
-  font-family: "PT Sans Bold";
+  font-family: 'PT Sans Bold', 'Arial', sans-serif;
   font-weight: bold;
   font-size: 18px;
   line-height: 26px;
 
 }
 .font-regular() {
-  font-family: "PT Sans Regular";
+  font-family: 'PT Sans Regular', 'Arial', sans-serif;
   font-weight: normal;
   font-size: 14px;
   line-height: 24px;
@@ -31,10 +31,11 @@
 }
 
 .btn-font() {
+  font-family: 'PT Sans Bold', 'Arial', sans-serif;
+  font-weight: bold;
   color: #ffffff;
   font-size: 21px;
   line-height: 28px;
-  font-weight: bold;
   text-transform: uppercase;
 }
 .btn-active() {
@@ -44,10 +45,6 @@
 .btn-hover() {
     background-color: @hover-blue;
 }
-.item-padding() {
-  padding-top: 45px;
-  padding-bottom: 45px;
-}
 .bg-image() {
     background-size: contain;
     background-position: center;
@@ -55,7 +52,7 @@
 }
 @font-face {
   font-weight: normal;
-  font-family: 'PT Sans Regular', sans-serif;
+  font-family: 'PT Sans Regular';
   font-style: normal;
   src: url('../fonts/ptsans.woff2') format('woff2'),
        url('../fonts/ptsans.woff') format('woff');
