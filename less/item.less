@@ -1,28 +1,40 @@
-.item {
+/* .item__wrap {
   padding: 40px 20px 40px 20px;
+} */
+.item {
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  /* max-width: 320px; */
 }
 .item__title {
   .font-bold();
+  /* max-width: 260px; */
+  text-align: center;
 }
 .item__text {
   .font-regular();
 }
-.item__title--prev {
-    margin-bottom: 40px;
-}
-.item__text--prev {
+.item--prev {
   position: relative;
-
+  padding-top: 40px;
+  padding-bottom: 27px;
+  .item__title {
+    max-width: 256px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+}
+  .item__text {
+    line-height: 26px;
+  }
   &::after {
   content: '';
   position: absolute;
-  left: -20px;
-  bottom: -55px;
-  width: 0;
-  height: 0;
+  left: 0;
+  bottom: -16px;
   border-left: 160px solid transparent;
   border-right: 160px solid transparent;
-  border-top: 15px solid #fff;
+  border-top: 16px solid #fff;
   }
 }
 .item__text--num {
@@ -31,37 +43,39 @@
 .item--blue {
   background-color: @bg-blue;
   color: #ffffff;
-}
-.item--blue .item__text {
+  padding-top: 35px;
+  padding-bottom: 38px;
+   .item__text {
   color: inherit;
+  }
 }
-.item--pic {
+.item__title--first {
+  margin-top: 20px;
+}
+.page-content__wrap,
+.page-content__wrap-reverse {
+  line-height: 0;
+}
+.item--img {
   width: 100%;
-  height: 260px;
-  background-size: cover;
+  height: 255px;
   padding: 0;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-.item--city {
-  background-image: url('../img/photo-city@1x.jpg');
-  background-size: cover;
-
-  @media @retina {
-    background-image: url('../img/photo-city@2x.jpg');
   }
-}
 
-.item__detail {
+.item--detail {
+  padding-top: 30px;
+  padding-left: 70px;
   text-align: left;
-  padding-left: 50px;
-
-  &:not(:last-child) {
-  margin-bottom: 40px;
+  .item__title {
+    text-align: left;
+    margin-bottom: 11px;
+  }
+  .item__text {
+    line-height: 21px;
   }
 }
-.item__detail .item__title {
-  margin-bottom: 20px;
+.item--meal {
+  padding-bottom: 40px;
 }
 .item__icon {
   position: relative;
@@ -75,40 +89,39 @@
   fill: @bg-blue;
   }
 }
-.item--bridge {
-  background-image: url('../img/photo-bridge@1x.jpg');
-  background-size: cover;
-
-  @media @retina {
-    background-image: url('../img/photo-bridge@2x.jpg');
-  }
-}
-.row-wrap {
-  background-color: #eeeeee;
-}
 .item--grey {
-  margin-right: 15px;
-  margin-left: 15px;
+  padding-top: 27px;
+  padding-bottom: 25px;
+  background-color: @bg-grey;
 
-  &:not(:first-child){
-  padding-top: 30px;
+  &:nth-child(2)  {
+    box-shadow: 0 -1px 1px -1px #d6d6d6,
+                0 1px 1px -1px #d6d6d6;
+  }
+  /* .item__text {
+    max-width: 250px;
+  } */
 }
-  &:not(:last-child) {
+.item--invite {
+  padding-top: 17px;
+  padding-left: 0;
+  padding-right: 0;
   padding-bottom: 30px;
+  .item__wrap {
+    padding-left: 20px;
+    padding-right: 20px;
   }
-  &:nth-child(2n) {
-  box-shadow: 0 -1px 1px -1px #d6d6d6,
-              0 1px 1px -1px #d6d6d6;
-  }
-}
-.item__title--invite {
+  .item__title {
   font-size: 21px;
   line-height: 46px;
+  margin-bottom: 10px;
 }
-.item__text--invite {
+/* .item__text {
   font-size: 14px;
   line-height: 24px;
+ } */
 }
+
 .item--invite a {
   display: inline-block;
   vertical-align: middle;
@@ -119,145 +132,207 @@
   .btn-active();
   }
 }
-
+.item__btn {
+  margin-top: 38px;
+  margin-bottom: 45px;
+}
 .btn {
     background-color: @bg-blue;
     color: #fff;
     padding-right: 30px;
     padding-left: 30px;
-    margin-top: 55px;
-    margin-bottom: 45px;
+
+    width: 100%;
     .btn-font();
     line-height: 57px;
   }
+.item__map {
+  width: 100%;
+
+  iframe {
+    width: 100%;
+    height: 350px;
+  }
+
+}
 @media @tablet-widths {
-  .item__text--prev::after {
-    display: none;
+
+  .page-content__wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    width: 100%;
   }
   .item {
-    width: 33.3%;
-    padding-right: 40px;
+    text-align: center;
     padding-left: 40px;
+    padding-right: 38px;
+    padding-top: 45px;
+    padding-bottom: 40px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-  }
+    justify-content: space-between;
+    align-items: center;
+    width: 33.333333%;
+}
   .item--prev {
     width: 100%;
-    order: 1;
-  }
-  .item--first {
-    order: 2;
-  }
-  .item-pic{
-    width: 66.7%;
-  }
-  .item--city {
-    order: 3;
-    background-image: url('../img/photo-city-tablet@1x.jpg');
+    align-items: center;
+  .item__title {
+      max-width: 440px;
+      margin: 0 auto;
+      font-size: 21px;
 
-    @media @retina {
-      background-image: url('../img/photo-city-tablet@2x.jpg');
+      margin-bottom: 35px;
     }
-
+    .item__text {
+      line-height: 26px;
+    }
+    &::after {
+    display: none;
+    }
+ }
+  .item__title--first {
+    margin-top: 0;
   }
-  .item--fifth {
-    order: 6;
+  .item__title {
+    .font-bold-plus();
   }
-  .item--bridge {
-    order: 5;
-    background-image: url('../img/photo-bridge-tablet@1x.jpg');
-
-    @media @retina {
-      background-image: url('../img/photo-bridge-tablet@2x.jpg');
+  .item__text {
+    .font-regular-plus();
+  }
+  .item--blue {
+    width: 33%;
+    align-items: center;
+    .item__text {
+      width: 170px;
     }
   }
-  .item--wrap {
+  .item--img {
+    width: 67%;
     padding: 0;
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    order: 4;
-    align-items: baseline;
-
-    .item__detail {
-      margin: 0;
+    img {
+      width: 100%;
     }
   }
-  .item__detail {
-    justify-content: baseline;
-    text-align: center;
-    padding-top: 150px;
+  .page-content__wrap--reverse {
+    flex-direction: row-reverse;
+  }
+
+  .item--detail {
+    padding-top: 60px;
     padding-bottom: 65px;
-    padding-right: 40px;
-    padding-left: 40px;
-
-  }
-  .item__detail--housing {
-    order: 1;
-  }
-  .item__detail--souvenir {
-    order: 3;
-  }
-  .item__detail--meal {
-    order: 2;
-  }
-  .item__icon {
+    .item__title {
+      text-align: center;
+      margin-bottom: 20px;
+    }
     svg {
-      top: -100px;
-      left: 50%;
-      margin-left: -33px;
-      height: 70px;
-      width: auto;
+      margin-bottom: 29px;
     }
   }
-  .row-wrap {
-    order: 7;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: baseline;
-    width: 100%;
-    padding: 0;
+
+
+  .item--housing {
+    order: 1;
+  }
+  .item--souvenir {
+    order: 3;
+  }
+  .item--meal {
+    order: 2;
+  }
+  .item__icon svg {
+    position: static;
+    width: auto;
+    height: 70px;
+    margin-bottom: 25px;
   }
   .item--grey {
-    padding-top: 60px;
-    padding-bottom: 60px;
-    padding-right: 40px;
-    padding-left: 40px;
-    flex-shrink: 1;
-    &:nth-child(2n) {
+
+    &:nth-child(2) {
       box-shadow: 0 0;
+    }
+    .item__title {
+      max-width: 120px;
+
+    }
+    .item__text--num {
+      line-height: 42px;
+      margin-bottom: 10px;
     }
   }
   .item--invite {
-    order: 8;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+
     .btn {
       width: 455px;
     }
+    .item__wrap {
+      width: 440px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+    justify-content: center;
+      align-items: center;
+    }
+    .item__title {
+    font-size: 30px;
+    margin-bottom: 25px;
   }
-  .item__title--invite {
-    margin-bottom: 35px;
+
   }
-  .item__text--invite {
-    max-width: 430px;
-    margin: 0 auto;
+
+  .item__btn {
+
+   margin-top: 44px;
+    margin-bottom: 57px;
+  }
+  .item__map {
+    height: 350px;
+  }
+  iframe {
+    height: 350px;
   }
 }
-@media @desktop-widths {
-  .item--city {
-    background-image: url('../img/photo-city@1x.jpg');
 
-    @media @retina {
-      background-image: url('../img/photo-city@2x.jpg');
+@media @desktop-widths {
+  /* .item__wrap {
+    padding-left: 65px;
+    padding-right: 65px;
+  } */
+  .item--prev {
+    padding-bottom: 50px;
+    .item__title {
+      max-width: 450px;
+      margin-bottom: 28px;
     }
   }
-  .item--bridge {
-     background-image: url('../img/photo-bridge@1x.jpg');
+  .item--blue {
+    padding-top: 50px;
+    padding-bottom: 60px;
+    .item__title {
+      width: 155px;
+    }
+    .item__text {
+      width: 270px;
+    }
+  }
+  .item--detail {
+    padding-bottom: 85px;
+  }
+  .item--invite {
+    padding-top: 70px;
 
-    @media @retina {
-      background-image: url('../img/photo-bridge@2x.jpg');
+    .item__btn {
+      margin-top: 49px;
+      margin-bottom: 70px
     }
   }
 }
