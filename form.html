@@ -10,85 +10,80 @@
     <header class="page-head">
       <nav class="main-menu main-menu--opened">
         <div class="main-menu__toggle"></div>
-         <ul class="main-menu__list list--1">
-           <li class="main-menu__item"><a href="index.html">Главная</a></li>
-           <li class="main-menu__item"><a href="photo.html">Фото и видео</a></li>
-          </ul>
-         <ul class="main-menu__list list--2">
+        <ul class="main-menu__list main-menu__list--1">
+          <li class="main-menu__item"><a href="index.html">Главная</a></li>
+          <li class="main-menu__item"><a href="photo.html">Фото и видео</a></li>
+        </ul>
+        <ul class="main-menu__list main-menu__list--2">
           <li class="main-menu__item current"><a href="#">Форма отзыва</a></li>
           <li class="main-menu__item"><a href="https://htmlacademy.ru/" target="blanc">Html Academy</a></li>
         </ul>
       </nav>
-      <div class="page-head__logo">
-        <a href="https://htmlacademy.ru/">
+      <div class="page-head__logo page-head__logo--inner">
+        <a href="index.html">
           <picture>
-            <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg" width="190">
+            <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
-            <img src="img/logo-sedona-mobile.svg" alt="Sedona">
+            <img src="img/logo-sedona-mobile.svg" alt="Sedona" width="102">
           </picture>
-        </a></div>
-
-
-
+        </a>
+      </div>
     </header>
     <main class="page-content">
-<div class="page-content__intro">
+      <section class="page-content__intro page-content__intro--inner">
        <h1><img src="img/text-sedona.svg" width="225" alt="Sedona"></h1>
-     </div>
-    <section class="page-content__form">
-      <div class="item item--prev">
-        <h2 class="item__title item__title--prev">Оставьте свой отзыв</h2>
-        <p class="item__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
-      </div>
-
-      <form class="form" action="https://echo.htmlacademy.ru/" method="post" name="backfeed">
-
-        <div class="form__item form__item--name">
-
-          <h2 class="form__title">Представьтесь:</h2>
-          <div class="form__wrap">
-          <nobr class="form__input-wrap"><label class="form__text form__input-wrap" for="name">Имя<sup>*</sup>
-
-          </label>
-          <input class="form__form-text" id="name" type="text" placeholder="Петр" required name="name"></nobr>
-          <nobr class="form__input-wrap">
-          <label class="form__text" for="surname">Фамилия<sup>*</sup>
-
-          </label>
-          <input class="form__form-text" id="surname" type="text" placeholder="Иванов" required name="surname"></nobr>
-          <nobr class="form__input-wrap">
-            <label class="form__text" for="fathername">Отчество
-
-            </label>
-            <input class="form__form-text" id="fathername" type="text" placeholder="Александрович" name="fathername"></nobr>
-          </div>
+      </section>
+      <section class="page-content__form">
+        <div class="item item--prev item--inner-prev">
+          <h2 class="item__title">Оставьте свой отзыв</h2>
+          <p class="item__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
         </div>
 
-          <div class="form__item form__item--contact">
-          <!-- обертка раздела "контакты" -->
+        <form class="form" action="https://echo.htmlacademy.ru/" method="post" name="backfeed">
 
-            <h2 class="form__title">Контактная информация:</h2>
+          <div class="form__item form__item--name">
 
-
+            <h2 class="form__title">Представьтесь:</h2>
             <div class="form__wrap">
-            <!-- обертка для input'ов -->
-
-          <div class="form__input-wrap">
-            <label class="form__text" for="tel">
-              <span class="form__magic">Контактный</span> телефон<sup>*</sup></label>
-
-            <span class="form__icon-wrap">
-              <input class="form__form-text" id="tel" type="tel" placeholder="Введите телефон" pattern="[0-9]{11}" required name="tel">
-              <label for="tel"><span class="form__icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 18 18"><path d="M3.6 7.8C5 10.6 7.4 12.9 10.2 14.4l2.2-2.2c0.3-0.3 0.7-0.4 1-0.2 1.1 0.4 2.3 0.6 3.6 0.6 0.6 0 1 0.4 1 1V17c0 0.6-0.4 1-1 1C7.6 18 0 10.4 0 1c0-0.6 0.4-1 1-1h3.5c0.6 0 1 0.4 1 1 0 1.2 0.2 2.4 0.6 3.6 0.1 0.3 0 0.7-0.2 1L3.6 7.8 3.6 7.8z" fill="#010101"/></svg> </span></label>
-            </span>
-              <span class="form__mistake">Ошибка, перепроверьте номер</span>
+              <div class="form__input-wrap">
+                <label class="form__text form__input-wrap" for="name">Имя<sup>*</sup>
+                </label>
+                <input class="form__form-text" id="name" type="text" placeholder="Петр" required name="name">
+              </div>
+              <div class="form__input-wrap">
+                <label class="form__text" for="surname">Фамилия<sup>*</sup>
+                </label>
+                <input class="form__form-text" id="surname" type="text" placeholder="Иванов" required name="surname">
+              </div>
+              <div class="form__input-wrap">
+                <label class="form__text" for="fathername">Отчество
+                </label>
+                <input class="form__form-text" id="fathername" type="text" placeholder="Александрович" name="fathername">
+              </div>
+            </div>
           </div>
 
-
-           <div class="form__input-wrap">
-            <label class="form__text" for="email"><nobr>Электронная почта</nobr><sup>*</sup></label>
-              <span class="form__icon-wrap"><input class="form__form-text" id="email" type="email" placeholder="Введите email" pattern="?" required name="email">
-              <label for="email"><span class="form__icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="M8 10c-0.3 0-0.5-0.1-1-0.3L0 6v7c0 0.6 0.5 1 1 1h14c0.6 0 1-0.4 1-1V6L9 9.7C8.5 9.9 8.3 10 8 10zM15 2H1C0.5 2 0 2.5 0 3v0.8l8 4.2 8-4.2V3C16 2.5 15.6 2 15 2z"/></svg></span></label></span>
+          <div class="form__item form__item--contact">
+            <h2 class="form__title">Контактная информация:</h2>
+            <div class="form__wrap">
+              <div class="form__input-wrap">
+                <label class="form__text" for="tel">
+                  <span class="form__magic">Контактный</span> телефон<sup>*</sup>
+                </label>
+                <span class="form__icon-wrap">
+                  <input class="form__form-text" id="tel" type="tel" placeholder="Введите телефон" pattern="[0-9]{11}" required name="tel">
+                  <label for="tel"><span class="form__icon"><svg width="16" xmlns="http://www.w3.org/2000/svg"  height="16" viewBox="0 0 18 18"><path d="M3.6 7.8C5 10.6 7.4 12.9 10.2 14.4l2.2-2.2c0.3-0.3 0.7-0.4 1-0.2 1.1 0.4 2.3 0.6 3.6 0.6 0.6 0 1 0.4 1 1V17c0 0.6-0.4 1-1 1C7.6 18 0 10.4 0 1c0-0.6 0.4-1 1-1h3.5c0.6 0 1 0.4 1 1 0 1.2 0.2 2.4 0.6 3.6 0.1 0.3 0 0.7-0.2 1L3.6 7.8 3.6 7.8z" fill="#010101"/></svg> </span></label>
+                </span>
+                <span class="form__mistake">Ошибка, перепроверьте номер</span>
+              </div>
+              <div class="form__input-wrap">
+                <label class="form__text" for="email">
+                  Электронная&nbsp;почта<sup>*</sup>
+                </label>
+                <span class="form__icon-wrap">
+                  <input class="form__form-text" id="email" type="email" placeholder="Введите email" required name="email">
+                  <label for="email"><span class="form__icon"><svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8 10c-0.3 0-0.5-0.1-1-0.3L0 6v7c0 0.6 0.5 1 1 1h14c0.6 0 1-0.4 1-1V6L9 9.7C8.5 9.9 8.3 10 8 10zM15 2H1C0.5 2 0 2.5 0 3v0.8l8 4.2 8-4.2V3C16 2.5 15.6 2 15 2z"/></svg></span></label>
+                </span>
               </div>
             </div>
           </div>
@@ -96,72 +91,81 @@
           <div class="form__item form__item--mark">
             <h2 class="form__title">Ваше общее впечатление:</h2>
             <div class="form__wrap">
-            <div class="form__input-wrap">
-            <input id="good" type="radio" value="Скорее положительное" name="mark" checked>
-            <label class="form__form-text" for="good">Скорее положительное</label></div>
-             <div class="form__input-wrap">
-            <input id="bad" type="radio" value="Скорее отрицательное" name="mark">
-            <label class="form__form-text" for="bad">Скорее отрицательное</label></div>
-             <div class="form__input-wrap">
-            <input id="strange" type="radio" value="Затрудняюсь ответить" name="mark">
-            <label class="form__form-text" for="strange">Затрудняюсь ответить</label></div>
+              <div class="form__input-wrap">
+                <input id="good" type="radio" value="Скорее положительное" name="mark" checked>
+                <label class="form__form-text" for="good">Скорее положительное</label>
+              </div>
+              <div class="form__input-wrap">
+                <input id="bad" type="radio" value="Скорее отрицательное" name="mark">
+                <label class="form__form-text" for="bad">Скорее отрицательное</label>
+              </div>
+              <div class="form__input-wrap">
+                <input id="strange" type="radio" value="Затрудняюсь ответить" name="mark">
+                <label class="form__form-text" for="strange">Затрудняюсь ответить</label>
+              </div>
 
             </div>
           </div>
 
-
           <div class="form__item form__item--sights">
             <h2 class="form__title">Посещенные достопримечательности:</h2>
             <div class="form__wrap">
-            <div class="form__sights-wrap">
-              <div class="form__input-wrap">
-                <input class="diablo-bridge" id="diablo-bridge" type="checkbox" checked name="visited-sights" value="diablo-bridge">
-                <label class="form__form-text" for="diablo-bridge">Мост дьявола</label>
+              <div class="form__sights-wrap">
+                <div class="form__input-wrap">
+                  <input class="diablo-bridge" id="diablo-bridge" type="checkbox" checked name="visited-sights" value="diablo-bridge">
+                  <label class="form__form-text" for="diablo-bridge">Мост дьявола</label>
+                </div>
+                <div class="form__input-wrap">
+                  <input id="slide-park" class="slide-park" type="checkbox" checked name="visited-sights" value="slide-park">
+                  <label class="form__form-text"   for="slide-park">Слайд-парк</label>
+                </div>
               </div>
-              <div class="form__input-wrap">
-                <input id="slide-park" class="slide-park" type="checkbox" checked name="visited-sights" value="slide-park">
-                <label class="form__form-text"   for="slide-park">Слайд-парк</label>
+              <div class="form__sights-wrap">
+                <div class="form__input-wrap">
+                  <input id="mountian-bell" class="mountian-bell" type="checkbox" name="visited-sights" value="mountian-bell">
+                  <label class="form__form-text" for="mountian-bell">Гора колокол</label>
+                </div>
+                <div class="form__input-wrap">
+                  <input id="red-rocks" class="red-rocks" type="checkbox" checked name="visited-sights" value="red-rocks">
+                  <label class="form__form-text" for="red-rocks">Красные скалы</label>
+                </div>
               </div>
-            </div>
-            <div class="form__sights-wrap">
-            <div class="form__input-wrap">
-              <input id="mountian-bell" class="mountian-bell" type="checkbox" name="visited-sights" value="mountian-bell">
-              <label class="form__form-text" for="mountian-bell">Гора колокол</label>
-            </div>
-            <div class="form__input-wrap">
-              <input id="red-rocks" class="red-rocks" type="checkbox" checked name="visited-sights" value="red-rocks">
-              <label class="form__form-text" for="red-rocks">Красные скалы</label>
-            </div>
-            </div>
             </div>
           </div>
 
           <div class="form__item form__item--emotions">
             <label class="form__title" for="emotions">Опишите свои эмоции:</label>
             <div class="form__wrap">
-            <textarea class="form__form-text" name="emotions" id="emotions" rows="5" placeholder="Опишите подробно все свои восторги"></textarea>
-            <input class="form__btn btn" id="submit" type="submit" value="Отправить отзыв">
-            <span class="form__rules form__text"><sup>*</sup>—Обязательные поля</span>
+              <textarea class="form__form-text" name="emotions" id="emotions" rows="5" placeholder="Опишите подробно все свои восторги"></textarea>
+              <input class="form__btn btn" id="submit" type="submit" value="Отправить отзыв">
+              <span class="form__rules form__text"><sup>*</sup>—Обязательные поля</span>
+            </div>
+          </div>
+
+        </form>
+
+        <div class="form__popup form__popup--failure">
+          <div class="form__wrap">
+           <h2 class="form__title">Что-то пошло не так</h2>
+           <p class="form__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+
+          </div>
+          <button class="btn">OK</button>
+        </div>
+        <div class="form__popup form__popup--success">
+           <div class="form__wrap">
+             <h2 class="form__title">Ваш отзыв отправлен!</h2>
+             <p class="form__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам.
+        В ближайшее время мы опубликуем его на сайте.</p>
+          </div>
+          <div class="form__btn-popup-wrap">
+            <button class="btn">Закрыть окно</button>
           </div>
         </div>
-        </form>
-       <!-- <div class="failure-popup">
-           <h2 class="item--title">Что-то пошло не так</h2>
-           <p class="item--text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-           <button class="btn">OK</button>
-        </div> -->
-        <!-- <div class="success-popup">
-           <h2 class="item--title">Ваш отзыв отправлен!</h2>
-           <p class="item--text">Спасибо за ваше участие, ваш отзыв уже поступил к нам.
-        В ближайшее время мы опубликуем его на сайте.</p>
-           <button class="btn">Закрыть окно</button>
-        </div> -->
 
-
-
-</section>
+      </section>
     </main>
-    <footer class="page-footer page-footer--form">
+    <footer class="page-footer page-footer--inner">
 
         <span class="page-footer__teg">#visitSEDONA</span>
         <div class="page-footer__social-btn">
