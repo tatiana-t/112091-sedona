@@ -45,9 +45,41 @@
 }
 .controls__subtitles {
   margin-right: 25px;
+   &:hover {
+      svg path {
+        fill: #333;
+    }
+  }
+  &:active {
+      svg path {
+        fill: #c1c1c1;
+    }
+  }
 }
 .controls__replay {
   margin-right: auto;
+   &:hover {
+      svg path {
+        fill: #333;
+    }
+  }
+  &:active {
+      svg path {
+        fill: #c1c1c1;
+    }
+  }
+}
+.controls__full-screen {
+    &:hover {
+      svg polygon {
+        fill: #333;
+    }
+  }
+  &:active {
+      svg polygon {
+        fill: #c1c1c1;
+    }
+  }
 }
 @media @tablet-widths {
   .controls {
