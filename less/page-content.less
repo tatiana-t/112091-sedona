@@ -54,25 +54,6 @@
 .page-content__photo {
   text-align: center;
 }
-
-
-
-
-/* .page-content__intro--inner {
-  background-color: @bg-blue;
-  background-image: url(../img/bg-intro-triangle-mobile.svg),
-                    url(../img/bg-back-mobile@1x.jpg);
-  background-repeat: no-repeat;
-  background-position: bottom, center;
-  background-size: 102%, 130%;
-  padding-top: 50px;
-  padding-bottom: 65px;
-
-} */
-
-
-
-
 @media @tablet-widths {
 
   .page-content__intro {
@@ -138,7 +119,9 @@
   .page-content__intro {
     &::before {
       background-image: url('../img/bg-intro-triangle-desktop.svg');
+      height: 63px;
       background-size: 102%;
+      bottom: 12px;
     }
     background-image: url('../img/bg-back-desktop@1x.jpg');
     background-size: 100%;
@@ -147,6 +130,11 @@
 
     @media @retina {
       background-image: url('../img/bg-back-desktop@2x.jpg');
+    }
+  }
+  .page-content__intro--inner {
+    &::before {
+      bottom: 0;
     }
   }
   .page-content__form {
