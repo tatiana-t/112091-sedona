@@ -1,15 +1,19 @@
-/* page-head */
 .page-head {
   text-align: center;
 }
+
 .page-head__logo {
   position: relative;
   z-index: 2;
   margin-bottom: -40px;
+  display: block;
+  line-height: 0;
 }
+
 .page-head__logo--inner {
   margin-bottom: -35px;
 }
+
 @media @tablet-widths {
   .page-head {
     position: relative;
@@ -21,11 +25,12 @@
     margin-left: -50px;
   }
 }
+
 @media @desktop-widths {
   .page-head__logo {
-     margin-left: -93px;
-     img {
-       width: 184px;
+    margin-left: -93px;
+    img {
+      width: 184px;
     }
   }
 }
