@@ -1,10 +1,10 @@
 "use strict";
 
-module.exports = function(grunt) {
-//  grunt.loadNpmTasks("grunt-contrib-less");
-//  grunt.loadNpmTasks("grunt-browser-sync");
-//  grunt.loadNpmTasks("grunt-contrib-watch");
-//  grunt.loadNpmTasks("grunt-postcss");
+module.exports = function (grunt) {
+  //  grunt.loadNpmTasks("grunt-contrib-less");
+  //  grunt.loadNpmTasks("grunt-browser-sync");
+  //  grunt.loadNpmTasks("grunt-contrib-watch");
+  //  grunt.loadNpmTasks("grunt-postcss");
 
   require("load-grunt-tasks")(grunt);
 
@@ -62,14 +62,15 @@ module.exports = function(grunt) {
         }
       }
     },
-
     postcss: {
       style: {
         options: {
           processors: [
-            require("autoprefixer")({browsers: [
+            require("autoprefixer")({
+              browsers: [
               "last 2 versions"
-            ]}),
+            ]
+            }),
             require("css-mqpacker")({
               sort: true
             })
@@ -78,7 +79,6 @@ module.exports = function(grunt) {
         src: "build/css/*.css"
       }
     },
-
     browserSync: {
       server: {
         bsFiles: {
@@ -97,7 +97,6 @@ module.exports = function(grunt) {
         }
       }
     },
-
     watch: {
       html: {
         files: ["*.html"],
@@ -111,13 +110,12 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask("serve", ["browserSync", "watch"]);
-
   grunt.registerTask("build", [
     "clean",
     "copy",
     "less",
     "postcss",
-    "csso",
+ //   "csso",
     "imagemin"
   ]);
 };
