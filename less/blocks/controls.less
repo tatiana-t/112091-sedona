@@ -5,29 +5,32 @@
   top: -47px;
   left: 0;
 }
+
 .controls__top {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   position: relative;
   width: 100%;
   height: 40px;
   background-color: rgba(0, 0, 0, 0.4);
 }
+
 .controls__line-view {
-  position: absolute;
-  top: 19px;
-  left: 25px;
   width: 230px;
   height: 4px;
   background-color: rgba(255, 255, 255, 0.3);
 }
+
 .controls__point {
-  position: absolute;
-  top: 0;
-  left: 50px;
   width: 5px;
   height: 5px;
   border-radius: 50%;
   background-color: #fff;
+  margin-left: 50px;
 }
+
 .controls__bottom {
   padding: 20px;
   display: flex;
@@ -37,50 +40,55 @@
   /* height: 65px; */
   background-color: @bg-grey;
 }
+
 .controls__right-group {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
+
 .controls__subtitles {
   margin-right: 25px;
-   &:hover {
-      svg path {
-        fill: #333;
+  &:hover {
+    svg path {
+      fill: #333;
     }
   }
   &:active {
-      svg path {
-        fill: #c1c1c1;
+    svg path {
+      fill: #c1c1c1;
     }
   }
 }
+
 .controls__replay {
   margin-right: auto;
-   &:hover {
-      svg path {
-        fill: #333;
+  &:hover {
+    svg path {
+      fill: #333;
     }
   }
   &:active {
-      svg path {
-        fill: #c1c1c1;
+    svg path {
+      fill: #c1c1c1;
     }
   }
 }
+
 .controls__full-screen {
-    &:hover {
-      svg polygon {
-        fill: #333;
+  &:hover {
+    svg polygon {
+      fill: #333;
     }
   }
   &:active {
-      svg polygon {
-        fill: #c1c1c1;
+    svg polygon {
+      fill: #c1c1c1;
     }
   }
 }
+
 @media @tablet-widths {
   .controls {
     width: 100%;
@@ -89,11 +97,21 @@
     height: 90px;
     top: -50px;
   }
+  .controls__line-view {
+    position: relative;
+    left: -30px;
+    width: 390px;
+  }
   .controls__bottom {
+    padding-left: 4.62962963%;
+    padding-right: 4.62962963%;
     position: relative;
     top: -123px;
     background-color: transparent;
     z-index: 2;
+  }
+  .controls__subtitles {
+    margin-right: 30px;
   }
   .controls__subtitles,
   .controls__full-screen,
@@ -105,12 +123,8 @@
       fill: #fff;
     }
   }
-  .controls__line-view {
-    width: 390px;
-    left: 90px;
-    top: 50%;
-  }
 }
+
 @media @desktop-widths {
   .controls__line-view {
     width: 540px;
